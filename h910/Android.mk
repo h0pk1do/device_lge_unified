@@ -25,6 +25,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter h918, vs995, us996,$(TARGET_DEVICE)),)
+ifneq ($(filter h918, vs995, us996, h990,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif

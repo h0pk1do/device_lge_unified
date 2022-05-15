@@ -61,3 +61,23 @@ $(call inherit-product, vendor/lge/us996/us996-vendor.mk)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/sensor_def_elsa_nao_us.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_variable.conf
     
+# H990
+
+# Get non-open-source specific aspects
+$(call inherit-product, vendor/lge/h990/h990-vendor.mk)
+
+# WiFi Calibration
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wifi/bcmdhd1.cal:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bcmdhd1.cal
+
+# Sensors
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/sensor_def_elsa_global_com.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_variable.conf    
+    
+# Device init scripts
+PRODUCT_PACKAGES += \
+    rild2.rc
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.multisim.config=dsds    
+    

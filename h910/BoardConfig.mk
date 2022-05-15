@@ -19,11 +19,12 @@ DEVICE_PATH := device/lge/h910
 # inherit from common v20
 -include device/lge/v20-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := h910,us996,elsa,h915,vs995
+TARGET_OTA_ASSERT_DEVICE := h910,us996,elsa,h915,vs995,h990
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineageos_h910_defconfig
+TARGET_KERNEL_CONFIG := lineageos_h990_defconfig
 KERNEL_DEFCONFIG_DIR := arm64
+BOARD_KERNEL_CMDLINE += model.name=LG-H990ds lge.sim_num=2
 
 # inherit from the proprietary version
 include vendor/lge/h910/BoardConfigVendor.mk
@@ -31,3 +32,5 @@ include vendor/lge/h910/BoardConfigVendor.mk
 include vendor/lge/vs995/BoardConfigVendor.mk
 # inherit from the proprietary version
 include vendor/lge/us996/BoardConfigVendor.mk
+# inherit from the proprietary version
+include vendor/lge/h990/BoardConfigVendor.mk

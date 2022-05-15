@@ -14,8 +14,8 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/superior_h910.mk
+    $(LOCAL_DIR)/nad_h910.mk
 
 COMMON_LUNCH_CHOICES := \
-    superior_h910-userdebug \
-    superior_h910-eng
+    nad_h910-userdebug \
+    nad_h910-eng
